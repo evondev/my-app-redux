@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import useDarkMode from "../hooks/useDarkMode";
 import {
   decrement,
   increment,
   incrementByValue,
 } from "../redux-toolkit/counterSlice";
+import { toggleDarkMode } from "../redux-toolkit/globalSlice";
 // import { decrement, increment, incrementByValue } from "../redux/counter";
 
 const Counter = () => {
@@ -46,9 +48,23 @@ const Counter = () => {
         </button>
         {/*
          */}
+        <SwitchDarkMode></SwitchDarkMode>
       </div>
     </div>
   );
 };
+function SwitchDarkMode() {
+  const [darkMode, setDarkMode] = useDarkMode();
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(toggleDarkMode(darkMode));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  const handleToggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    dispatch(toggleDarkMode(!darkMode));
+  };
+  return <button onClick={handleToggleDarkMode}>Toggle dark mode</button>;
+}
 export default Counter;
