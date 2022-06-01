@@ -18,7 +18,7 @@ const counterSlice = createSlice({
       // Handle logic code here
       return {
         ...state,
-        count: state.count + payload.value,
+        count: state.count + payload,
       };
     },
   },

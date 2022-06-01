@@ -3,6 +3,15 @@
 - Ví dụ Counter với Redux toolkit
 - Thực hành Redux chức năng DarkMode
 - Thực hành Redux chức năng Toggle Sidebar
-- Middlewares toàn tập
-- Redux Saga toàn tập
+- Middleware là gì ?
+- Middleware hoạt động như thế nào ?
+- Thực hành viết 1 middleware đơn giản
+- Sử dụng redux-logger middleware
+- Redux Saga middleware
+- Cài đặt redux-saga
+- Thiết lập redux-saga
+- Hiểu rõ hoạt động của redux-saga
+- Cấu trúc thư mục redux-saga
+- Tìm hiểu Generator Function cơ bản
+- Tìm hiểu call, fork, all, takeLatest, takeEvery, select, put, take
 - Thực hành: Fetching dữ liệu với Redux Saga
