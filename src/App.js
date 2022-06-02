@@ -1,27 +1,15 @@
 import { useEffect } from "react";
-import HackerNews from "./components/HackerNews";
-
+import { useDispatch, useSelector } from "react-redux";
+import { getNews } from "./sagas/news/newsSlice";
+// redux saga architecture
 function App() {
-  // Generator function
-  // useEffect(() => {
-  //   function* demoGenerator() {
-  //     console.log("running");
-  //     let id = 1;
-  //     while (true) {
-  //       yield id;
-  //       id++;
-  //     }
-  //   }
-  //   const gen = demoGenerator();
-  //   console.log(gen.next());
-  //   console.log(gen.next());
-  //   console.log(gen.throw(new Error("error")));
-  // }, []);
-  return (
-    <div>
-      <HackerNews></HackerNews>
-    </div>
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getNews());
+  }, [dispatch]);
+  const hits = useSelector((state) => state.news.hits);
+  console.log("App ~ hits", hits);
+  return <div></div>;
 }
 
 export default App;

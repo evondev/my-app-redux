@@ -10,8 +10,14 @@
 - Redux Saga middleware
 - Cài đặt redux-saga
 - Thiết lập redux-saga
-- Hiểu rõ hoạt động của redux-saga
 - Cấu trúc thư mục redux-saga
 - Tìm hiểu Generator Function cơ bản
+- Hiểu rõ hoạt động của redux-saga:
+  -> Redux action dispatched from component(getNews)
+  -> Watcher Saga catches the action
+  -> Handler call a function to make the request(handleGetNews)
+  -> Call requestGetNews
+  -> setNews
+  -> Update component
 - Tìm hiểu call, fork, all, takeLatest, takeEvery, select, put, take
 - Thực hành: Fetching dữ liệu với Redux Saga
