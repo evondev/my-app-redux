@@ -7,4 +7,7 @@
     padding: 20px;
     font-family: "DM sans", sans-serif;
   }
+  input {
+    outline: none;
+  }
 }
