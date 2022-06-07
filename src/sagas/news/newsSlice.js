@@ -1,4 +1,6 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAction } from "@reduxjs/toolkit";
+
+export const otherAction = createAction("updateLoading");
 
 const newsSlice = createSlice({
   name: "news",
@@ -27,7 +29,13 @@ const newsSlice = createSlice({
       query: action.payload,
     }),
   },
+  extraReducers: (builder) => {
+    builder.addCase(otherAction, (state, action) => {
+      state.loading = action.payload;
+    });
+  },
 });
 export const { getNews, setNews, setLoading, setErrorMessage, setQuery } =
   newsSlice.actions;
 export default newsSlice.reducer;
+// redux-thunk

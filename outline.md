@@ -19,5 +19,8 @@
   -> Call requestGetNews
   -> setNews
   -> Update component
-- Tìm hiểu call, fork, all, takeLatest, takeEvery, select, put, take
+- Tìm hiểu call, fork, all, takeLatest, takeEvery, select, put
 - Thực hành: Fetching dữ liệu với Redux Saga
+- Tìm hiểu extraReducers
+- Tìm hiểu Redux-thunk
+- Tối ưu cấu trúc thư mục dự án Redux
